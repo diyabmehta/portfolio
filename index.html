@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diya Mehta | Data Portfolio</title>
+    <meta
+      name="description"
+      content="Interactive data analytics portfolio for Diya Mehta, featuring SQL, Snowflake, business analysis, and data storytelling projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="networkCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Diya Mehta home">
+        <span>DM</span>
+        <strong>Diya Mehta</strong>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle color theme">
+        <span class="sun" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Data analytics portfolio</p>
+          <h1 id="hero-title">Diya Mehta</h1>
+          <p class="hero-text">
+            I turn messy business questions into structured data models, clear metrics, and
+            decision-ready stories across SQL, Python, and Snowflake.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#projects">View projects</a>
+            <a class="secondary-action" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="metric-panel" aria-label="Portfolio highlights">
+          <div class="metric active">
+            <span data-count="5">0</span>
+            <p>Relational tables modeled</p>
+          </div>
+          <div class="metric">
+            <span data-count="3">0</span>
+            <p>Analytics workflows</p>
+          </div>
+          <div class="metric">
+            <span data-count="100">0</span>
+            <p>Percent interview-ready storytelling</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tool-band" aria-label="Core skills">
+        <button class="skill-chip active" type="button" data-skill="sql">SQL</button>
+        <button class="skill-chip" type="button" data-skill="python">Python</button>
+        <button class="skill-chip" type="button" data-skill="snowflake">Snowflake</button>
+        <button class="skill-chip" type="button" data-skill="storytelling">Storytelling</button>
+        <p id="skillInsight">
+          SQL is where I connect data structure to business meaning: joins, CTEs, windows, and
+          clean metric definitions.
+        </p>
+      </section>
+
+      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="projects-title">Projects</h2>
+        </div>
+
+        <div class="filter-row" aria-label="Project filters">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="analytics">Analytics</button>
+          <button class="filter-button" type="button" data-filter="sql">SQL</button>
+          <button class="filter-button" type="button" data-filter="python">Python</button>
+        </div>
+
+        <div class="project-layout">
+          <div class="project-grid" id="projectGrid">
+            <article class="project-card" data-tags="analytics sql storytelling" tabindex="0">
+              <div class="project-visual revenue-visual" aria-hidden="true">
+                <span style="--h: 44%"></span>
+                <span style="--h: 62%"></span>
+                <span style="--h: 54%"></span>
+                <span style="--h: 82%"></span>
+                <span style="--h: 70%"></span>
+              </div>
+              <div>
+                <p class="project-kicker">E-commerce analytics</p>
+                <h3>Revenue, Retention, and ROAS</h3>
+                <p>
+                  A SQL portfolio project that models transactional and marketing data, then
+                  analyzes KPIs, cohorts, margin, LTV, and paid-channel return.
+                </p>
+              </div>
+              <button class="text-action" type="button">Explore details</button>
+            </article>
+
+            <article class="project-card" data-tags="python snowflake analytics" tabindex="0">
+              <div class="project-visual snowflake-visual" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div>
+                <p class="project-kicker">Cloud data starter</p>
+                <h3>Snowflake Sales Pipeline</h3>
+                <p>
+                  A Python CLI that creates Snowflake objects, validates identifiers, loads sample
+                  sales rows, and returns regional revenue summaries.
+                </p>
+              </div>
+              <button class="text-action" type="button">Explore details</button>
+            </article>
+
+            <article class="project-card" data-tags="analytics storytelling" tabindex="0">
+              <div class="project-visual tracker-visual" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div>
+                <p class="project-kicker">Research operations</p>
+                <h3>Verified Opportunity Tracker</h3>
+                <p>
+                  A structured tracker workflow for evaluating active job postings, removing stale
+                  listings, and prioritizing strong-fit analytics roles.
+                </p>
+              </div>
+              <button class="text-action" type="button">Explore details</button>
+            </article>
+          </div>
+
+          <aside class="detail-panel" id="projectDetail" aria-live="polite">
+            <p class="eyebrow">Project detail</p>
+            <h3>Revenue, Retention, and ROAS</h3>
+            <p>
+              Modeled five tables and wrote analysis queries for monthly performance, customer LTV,
+              cohort retention, and marketing efficiency.
+            </p>
+            <ul>
+              <li>Built normalized tables and foreign-key relationships.</li>
+              <li>Used CTEs, joins, window functions, and conditional aggregation.</li>
+              <li>Translated raw outputs into a concise presentation story.</li>
+            </ul>
+            <a href="sql_project/README.md">Open project notes</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About me</p>
+          <h2 id="about-title">Curious analyst, practical builder.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              I like work that sits between business judgment and technical execution: defining the
+              metric, finding the data, building the query, checking the edge cases, and explaining
+              what changed in language people can act on.
+            </p>
+            <p>
+              My current portfolio emphasizes SQL analytics, Snowflake fundamentals, data quality,
+              and the discipline of turning analysis into a clean narrative.
+            </p>
+          </div>
+
+          <div class="timeline" aria-label="About highlights">
+            <button class="timeline-item active" type="button" data-note="Builds analytics from schema to story.">
+              <span>01</span>
+              <strong>Model the data</strong>
+            </button>
+            <button class="timeline-item" type="button" data-note="Uses repeatable queries and clear assumptions.">
+              <span>02</span>
+              <strong>Measure what matters</strong>
+            </button>
+            <button class="timeline-item" type="button" data-note="Turns outputs into decisions, caveats, and next steps.">
+              <span>03</span>
+              <strong>Tell the story</strong>
+            </button>
+            <p id="timelineNote">Builds analytics from schema to story.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-strip" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let&apos;s build something useful with data.</h2>
+        </div>
+        <a class="primary-action" href="mailto:diyabmehta@gmail.com">Email me</a>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
